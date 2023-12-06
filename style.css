@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    width: auto;
+    background-color: rgb(60, 56, 56);
+}
+
+#asteroid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    
+}
+
+#asteroid img {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+}
+
+#asteroid img:hover {
+    cursor: pointer;
+}
+
+#counter {
+    color: white;
+}
