@@ -2,9 +2,21 @@ body {
     margin: 0;
     box-sizing: border-box;
     width: auto;
+    height: auto;
     background-color: rgb(60, 56, 56);
+    background-image: url(./images/space\ background\ 2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
+/* Counter Styles */
+#counter {
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+/* Asteroid Styles */
 #asteroidBtn {
     display: flex;
     justify-content: center;
@@ -15,6 +27,7 @@ body {
 
 #asteroidBtn img {
     position: absolute;
+    top: 35%;
 
 }
 
@@ -22,7 +35,7 @@ body {
     cursor: pointer;
 }
 
-#counter {
-    color: white;
-}
+
+
+
 
