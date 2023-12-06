@@ -1,14 +1,29 @@
-let rareMetals = document.getElementById("score");
-let score 
+let score = document.getElementById("score");
+let counter = 0;
+const asteroidBtn = document.getElementById("asteroidBtn");
+
+console.log(score.textContent)
+console.log(score.innerHTML)
 
 
 
-
-const clickAsteroid = () => {
-    document.getElementById("counter");    
-    counter + 1;
+let clickAsteroid = () => {  
+    counter ++;
     score.textContent = counter;
 }
+
+asteroidBtn.addEventListener("click", clickAsteroid);
+
+
+
+
+
+
+
+
+
+
+
 
 
 

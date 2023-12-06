@@ -5,7 +5,7 @@ body {
     background-color: rgb(60, 56, 56);
 }
 
-#asteroid {
+#asteroidBtn {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -13,16 +13,16 @@ body {
     
 }
 
-#asteroid img {
+#asteroidBtn img {
     position: absolute;
-    top: 40%;
-    left: 40%;
+
 }
 
-#asteroid img:hover {
+#asteroidBtn img:hover {
     cursor: pointer;
 }
 
 #counter {
     color: white;
 }
+
