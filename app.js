@@ -1,8 +1,7 @@
 let score = document.getElementById("score");
 let counter = 0;
 
-
-// Click Asteroid function
+// Click Asteroid function //
 const asteroidBtn = document.getElementById("asteroidBtn");
 
 const clickAsteroid = () => {  
@@ -12,21 +11,42 @@ const clickAsteroid = () => {
 
 asteroidBtn.addEventListener("click", clickAsteroid);
 
-// Increse Counter by 1 each second / Upgrade 1 ## SHIP MINER ##
+// Increse Counter by 1 each second / Upgrade 1 ## SHIP MINER ## //
 
-const shipMiner = document.getElementById("shipMiner");
+const shipMinerBtn = document.getElementById("shipMinerBtn");
 
-const upgrade1 = () => {
+const shipMinerUpgrade = () => {
     setInterval(function(){
         counter ++;
         score.textContent = counter;
-        console.log(counter);
     }, 1000);
 }
 
-shipMiner.addEventListener("click", upgrade1);
+shipMinerBtn.addEventListener("click", shipMinerUpgrade);
 
-// 
+// Show SHIP MINER availability to purchase //
+
+let upgrade1 = document.getElementById("upgrade1")
+// let shipMinercost = document.getElementById("shipMinerCost");
+let shipMinerCost = 15;
+
+
+const shipMinerCostCheck = () => {
+    setInterval(function(){
+        if (counter >= shipMinerCost) {
+            upgrade1.classList.add("available")
+            console.log(counter);
+        }
+    },2000);
+}
+
+asteroidBtn.addEventListener("click", shipMinerCostCheck);
+
+
+
+
+
+
 
 
 
