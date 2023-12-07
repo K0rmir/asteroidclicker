@@ -27,22 +27,19 @@ shipMinerBtn.addEventListener("click", shipMinerUpgrade);
 // Show SHIP MINER availability to purchase //
 
 let upgrade1 = document.getElementById("upgrade1")
-// let shipMinercost = document.getElementById("shipMinerCost");
 let shipMinerCost = 15;
-
 
 const shipMinerCostCheck = () => {
     setInterval(function(){
         if (counter >= shipMinerCost) {
-            upgrade1.classList.add("available")
-            console.log(counter);
+            upgrade1.classList.remove("notAvailable")
         }
     },2000);
 }
 
 asteroidBtn.addEventListener("click", shipMinerCostCheck);
 
-
+// ----------------------------------- //
 
 
 

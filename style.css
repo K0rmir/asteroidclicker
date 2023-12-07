@@ -14,6 +14,9 @@ body {
     color: white;
     display: flex;
     align-items: center;
+    font-size: 1.25rem;
+    margin-left: 20px;
+    gap: 5px;
 }
 
 /* Asteroid Styles */
@@ -67,13 +70,13 @@ body {
 }
 
 /* .available {
-    opacity: 1;
-}
+    opacity: 0%;
+} */
 
 .notAvailable {
-    opacity: 0;
+    opacity: 30%;
     pointer-events: none;
-} */
+}
 
 /* ShipMiner Button */
 #shipMinerBtn {
