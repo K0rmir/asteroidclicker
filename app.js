@@ -7,11 +7,13 @@ const asteroidBtn = document.getElementById("asteroidBtn");
 const clickAsteroid = () => {  
     counter ++;
     score.textContent = counter;
+    localStorage.setItem("localScore", counter);
 }
 
 asteroidBtn.addEventListener("click", clickAsteroid);
 
 // ## Upgrade 1 -- SHIP MINER ## //
+
 // Ship Miner Plus +1 per second //
 
 const shipMinerBtn = document.getElementById("shipMinerBtn");
@@ -20,6 +22,7 @@ const shipMinerUpgrade = () => {
     setInterval(function(){
         counter ++;
         score.textContent = counter;
+        localStorage.setItem("localScore", counter);
     }, 1000);
 }
 
@@ -34,10 +37,10 @@ const shipMinerCostCheck = () => {
         if (counter >= shipMinerCost) {
             upgrade1.classList.remove("notAvailable")
         } 
-    },750);
+    },100);
 }
 
-asteroidBtn.addEventListener("click", shipMinerCostCheck);
+shipMinerCostCheck();
 
 // Reduce counter by cost of SHIP MINER //
 
@@ -50,12 +53,24 @@ const shipMinerBuy = () => {
     upgrade1.classList.add("notAvailable");
     shipMinerCost = Math.floor(shipMinerCost *= 1.5);
     shipMinerPrice.textContent = shipMinerCost;
-    console.log(counter);
 }
 
 shipMinerBtn.addEventListener("click", shipMinerBuy);
 
-// ----------------------------------- //
+// Local Storage //
+// Function to retrieve score from localstorage and set counter on page reload //
+
+function setLocalScore() {
+    counter = localStorage.getItem("localScore");
+    score.textContent = counter;
+}
+
+setLocalScore();
+
+
+
+
+
 
 
 
