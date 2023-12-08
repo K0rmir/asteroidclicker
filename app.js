@@ -17,6 +17,8 @@ asteroidBtn.addEventListener("click", clickAsteroid);
 // Ship Miner Plus +1 per second //
 
 const shipMinerBtn = document.getElementById("shipMinerBtn");
+const shipMinerQuantity = document.getElementById("shipMinerQuantity");
+let shipMinerQuantityCount = 0;
 
 const shipMinerUpgrade = () => {
     setInterval(function(){
@@ -24,6 +26,9 @@ const shipMinerUpgrade = () => {
         score.textContent = counter;
         localStorage.setItem("localScore", counter);
     }, 1000);
+    shipMinerQuantityCount ++;
+    shipMinerQuantity.textContent = shipMinerQuantityCount;
+    localStorage.setItem("shipMinerQuantity", shipMinerQuantityCount);
 }
 
 shipMinerBtn.addEventListener("click", shipMinerUpgrade);
@@ -51,11 +56,12 @@ const shipMinerBuy = () => {
     counter -= shipMinerCost;
     score.textContent = counter;
     upgrade1.classList.add("notAvailable");
-    shipMinerCost = Math.floor(shipMinerCost *= 1.5);
+    shipMinerCost = Math.floor(shipMinerCost *= 1.1);
     shipMinerPrice.textContent = shipMinerCost;
 }
 
 shipMinerBtn.addEventListener("click", shipMinerBuy);
+
 
 // Local Storage //
 // Function to retrieve score from localstorage and set counter on page reload //
@@ -66,8 +72,6 @@ function setLocalScore() {
 }
 
 setLocalScore();
-
-
 
 
 

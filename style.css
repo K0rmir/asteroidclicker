@@ -3,7 +3,6 @@ body {
     box-sizing: border-box;
     width: 100%;
     height: 100%;
-    background-color: rgb(60, 56, 56);
     background-image: url(./images/space\ background\ 2.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -39,7 +38,7 @@ body {
 /* Upgrade Styles */
 /* ## Upgrade Bar ## */
 .upgradesBar {
-    width: 15%;
+    width: 17%;
     height: 500px;
     display: flex;
     flex-direction: column;
@@ -59,6 +58,28 @@ body {
     align-items: center;
     gap: 5px;
 }
+/* Upgrade Quanity Styles  */
+
+.costAndQuantity {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding-right: 15px;
+}
+
+.quantity {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    gap: 5px;
+}
+
+.quantity p {
+    margin: 0;
+}
+
+
 /* ShipMiner / Upgrade 1 Styles */
 #upgrade1 {
     display: flex;
@@ -88,6 +109,8 @@ body {
     height: 60px;
     font-family: monospace;
     color: black;
+    padding-left: 25px;
+    padding-top: 10px;
 }
 
 #shipMinerBtn:hover {
