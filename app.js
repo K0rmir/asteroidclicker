@@ -14,10 +14,10 @@ asteroidBtn.addEventListener("click", clickAsteroid);
 
 // ## Upgrade 1 -- SHIP MINER ## //
 
-// Ship Miner Plus +1 per second //
+// Ship Miner +1 per second //
 
-const shipMinerBtn = document.getElementById("shipMinerBtn");
-const shipMinerQuantity = document.getElementById("shipMinerQuantity");
+let shipMinerBtn = document.getElementById("shipMinerBtn");
+let shipMinerQuantity = document.getElementById("shipMinerQuantity");
 let shipMinerQuantityCount = 0;
 
 const shipMinerUpgrade = () => {
@@ -56,7 +56,7 @@ const shipMinerBuy = () => {
     counter -= shipMinerCost;
     score.textContent = counter;
     upgrade1.classList.add("notAvailable");
-    shipMinerCost = Math.floor(shipMinerCost *= 1.1);
+    shipMinerCost = Math.floor(shipMinerCost *= 1.5);
     shipMinerPrice.textContent = shipMinerCost;
 }
 
@@ -69,6 +69,9 @@ shipMinerBtn.addEventListener("click", shipMinerBuy);
 function setLocalScore() {
     counter = localStorage.getItem("localScore");
     score.textContent = counter;
+    shipMinerQuantityCount = localStorage.getItem("shipMinerQuantity");
+    shipMinerQuantity.textContent = shipMinerQuantityCount;
+    
 }
 
 setLocalScore();
